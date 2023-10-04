@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ps6nrbmvesdu"]
+
+[ext_resource type="Script" path="res://Scripts/GamePlay/StrategyCameraController.cs" id="1_db7xe"]
+
+[node name="CameraController" type="Node3D"]
+script = ExtResource("1_db7xe")
+moveSpeed = 0.1
+pitchSpeed = 0.1
+forwardAxis = "ui_up"
+leftAxis = "ui_left"
+backwardAxis = "ui_down"
+rightAxis = "ui_right"
+
+[node name="Pitch" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0)
+
+[node name="Zoom" type="Node3D" parent="Pitch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="Camera3D" type="Camera3D" parent="Pitch/Zoom"]
